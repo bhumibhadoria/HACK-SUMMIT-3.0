@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SUBKRIPTON</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <style>
+        body{
+            background-color: rgb(15, 20, 20);
+        }
+        
+        #background-video {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+}
+        .left{
+            display: inline-block;
+            position: absolute;
+            left:31px;
+            top: 35px;
+        }
+        .left img{
+            height:137px;
+            width: 153px;
+        }
+        .left div{
+            line-height: 0px;
+            text-align : center;
+            font-size: 28px;
+            color: white;
+            font-weight: bold;
+        }
+        .mid{
+            display: block;
+            width: 65%;
+            margin: 21px 309px;
+        }
+        .right{
+            position: absolute;
+            right:34px;
+            top: 43px;
+            display: inline-block;
+        }
+        .navbar {
+            display:inline-block;
+
+        }
+        .navbar li{
+            display: inline-block;
+            font-size: 25px;
+            background-color: rgb(56, 142, 176);
+            border-radius: 8px;
+            padding: 6px 27px;
+        }
+        .navbar li a{
+            text-decoration: none;
+            color: white;
+            padding: 20px 23px;
+            
+        }
+        .navbar li:hover{
+            background-color: rgb(116, 165, 70);
+        }
+        .btn{
+            margin: 0px 9px;
+            color: white;
+            background-color: transparent;
+            border-color: azure;
+            cursor: pointer;
+            border-radius: 10px;
+            font-weight: bold;
+            
+            font-size: large;
+            padding: 4px 14px;
+        }
+        .btn:hover {
+        background-color: rgba(13, 207, 233, 0.447);
+      }
+      .container {
+        
+        margin: 320px 14px;
+        padding: 7px 63px;
+        width: 35%;
+        border-radius: 19px;
+        color: white;
+        
+      }
+      .container h1 {
+        font-size: 44px;
+        font-weight: bold;
+        text-align: center;
+        color: rgb(73, 206, 206);
+      }
+      .bgvid{
+        position: absolute;
+       right: -318px;
+        bottom: -6px;
+        top: -90px;
+        z-index: -1;
+      }
+      p{
+        font-family: 'Fuzzy Bubbles', cursive;
+
+        color: rgb(10, 9, 9);
+        font-size: 30px;
+      }
+      .form-group input{
+        text-align: center;
+        display: block;
+        width: 344px;
+        padding: 4px;
+        border :2px solid white;
+        margin: 6px auto;
+        font-size: 20px;
+      }
+      .container button{
+        display: block;
+        width: 370px;
+        margin: 26px 78px;
+      }
+      .nr{
+        color: white;
+        border-radius: 3px solid white;
+      }
+      .nr a{
+        position: relative;
+        color: rgb(48, 166, 184);
+        left:200px;
+        right: 0px;
+        font-size: 25px;
+        text-decoration: none;
+
+      }
+    </style>
+</head>
+<body>
+    <div class="bg">
+        <video autoplay loop muted plays-inline class="bgvid" id="background-video">
+            <source src="bg.mp4" type="video/mp4">
+        </video>
+        
+    <header class="header">
+        <!-- left box for logo  -->
+        <div class="left">
+          <img src="{% static 'logo2.png' %}" alt="" />
+          <div>Subkripton</div>
+        </div>
+        <!-- mid box for navbar  -->
+        <div class="mid">
+          <nav class="navbar">
+            <ul>
+             
+              <li><a href="#" class="active">Home</a></li>
+              <li><a href="#">Collaborations</a></li>
+              
+              <li><a href="#">Why We</a></li>
+              <li><a href="#">About Us</a></li>
+            </ul>
+          </nav>
+        </div>
+         <!-- right box for buttons  -->
+      <div class="right">
+        <button class="btn">Contact Us</button>
+        <button class="btn">Email Us</button>
+      </div>
+      </header>
+
+      <div class="container">
+        <h1>LOGIN</h1>
+        <form action="">
+            <div class="form-group">
+                User-Id :<input type="email" />
+            </div><br>
+            <div class="form-group">
+                Password :<input type="text"/>
+            </div>
+            <button class="btn"><a href="127.0.0.1:5500/template/credentials.html" >Submit</a></button>
+            
+        </form>
+        <div class="nr">
+            <a href="#">Create Account</a>
+        </div>
+
+      </div>
+    </div>
+</body>
+</html>
